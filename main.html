@@ -12,31 +12,41 @@
 				<span class="sound">Kick</span>
 			</div>
 			<div data-key="83" class="key">
-				<kbd>K</kbd>
+				<kbd>S</kbd>
 				<span class="sound">Snare</span>
 			</div>
 			<div data-key="74" class="key">
-				<kbd>K</kbd>
+				<kbd>J</kbd>
 				<span class="sound">Hi-Hat</span>
 			</div>
 			<div data-key="70" class="key">
-				<kbd>K</kbd>
+				<kbd>F</kbd>
 				<span class="sound">Tom1</span>
 			</div>
 			<div data-key="67" class="key">
-				<kbd>K</kbd>
+				<kbd>C</kbd>
 				<span class="sound">Cowbell</span>
 			</div>
 			<div data-key="72" class="key">
-				<kbd>K</kbd>
+				<kbd>H</kbd>
 				<span class="sound">Crash</span>
 			</div>
 		</div>
 		
-		<audio data-key="68" src="sounds/kick.wav"></audio>
+		<audio data-key="75" src="sounds/Kick.wav"></audio>
+		<audio data-key="83" src="sounds/Snare.wav"></audio>
+		<!-- <audio data-key="74" src="sounds/Hi-Hat.wav"></audio>
+		<audio data-key="70" src="sounds/Tom1.wav"></audio>
+		<audio data-key="67" src="sounds/Cowbell.wav"></audio>
+		<audio data-key="72" src="sounds/Crash.wav"></audio> -->
 
 		<script>
-
+			window.addEventListener('keydown', function(e) {
+				const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+				if (!audio) return; //stop function from running
+				audio.currentTime = 0; //rewind to start
+				audio.play();
+			});
 		</script>
 
 	</body>
