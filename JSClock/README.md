@@ -1,4 +1,4 @@
-#Javascript 2/30 JS Clock
+Javascript 2/30 JS Clock
 
 What I learned:
 
